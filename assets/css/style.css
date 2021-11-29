@@ -7,14 +7,14 @@
 }
 
 .fundo {
-  background: #2c2c50;
+  background:#131315;
   min-height: 100vh;
 }
 
 .menu {
-  background: #131315;
   display: flex;
   justify-content: center;
+  background: #2c2c50;
 }
 
 .menu ul {
@@ -24,9 +24,10 @@
 
 .menu ul li a {
   text-decoration: none;
-  color: #f4f4f4;
+  color: rgb(255, 255, 255);
   margin: 15px;
   font-size: 40px;
+  
 }
 
 .perfil {

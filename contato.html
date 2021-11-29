@@ -27,32 +27,30 @@
           <form>
             <div class="campos">
               <label for="nome">Nome:</label>
-              <input type="text" id="nome" />
+              <input type="text" id="nome" onkeyup="validaNome()" />
+              <div id="txtNome"></div>
             </div>
 
             <div class="campos">
               <label for="email">E-mail:</label>
-              <input type="email" id="email" />
+              <input type="email" id="email" onkeyup="validaEmail()"/>
+              <div id="txtEmail"></div>
             </div>
 
             <div class="campos">
               <label for="assunto">Assunto:</label>
-              <textarea
-                name="assunto"
-                id="assunto"
-                cols="60"
-                rows="5"
-              ></textarea>
+              <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+              <div id="txtAssunto"></div>
             </div>
 
-            <button>Enviar</button>
+            <button onclick="enviar()">Enviar</button>
           </form>
         </div>
 
         <div class="mapa">
           <h2>Endereço:</h2>
 
-          <iframe
+          <iframe onmousemove="mapaZoom()" onmouseout="mapaNormal()"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.409522955173!2d-34.92313108582999!3d-8.161429984030239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aae1c652b17885%3A0xf15a88d49bf05f95!2sR.%20Floriano%20Peixoto%20-%20Prazeres%2C%20Jaboat%C3%A3o%20dos%20Guararapes%20-%20PE!5e0!3m2!1spt-BR!2sbr!4v1637855145688!5m2!1spt-BR!2sbr"
             width="450"
             height="350"
@@ -62,9 +60,11 @@
             loading="lazy"
             aria-hidden="false"
             tabindex="0"
+            id="mapa"
           ></iframe>
         </div>
       </div>
     </div>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
